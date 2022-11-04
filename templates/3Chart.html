@@ -1,0 +1,217 @@
+{% extends "parts/base.html" %}
+
+{% block title %} Chart {% endblock title %}
+
+{% block site_nav %}
+{% include "parts/site_nav.html" %}
+
+
+{% endblock site_nav %}
+
+
+{% block hero_overlay %}
+{% include "parts/hero_overlay.html" %}
+<div class="container">
+    <div class="row align-items-center justify-content-start">
+        <div class="col-lg-5">
+            {% block page_content2 %}
+            <h1 class="heading" data-aos="fade-up">Chart</h1>
+            {% endblock page_content2 %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock hero_overlay %}
+
+
+{% block page_content %}
+<!-- <div class="section service-section-1"> -->
+    <div class="container">
+        <div class="row">
+
+            <div>
+                <br>
+                <h1 class="text-center fw-bolder">分析圖表</h6>
+            </div>
+
+            <div class="col-4">
+                <label class="fw-bolder">Day</label>
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text fw-bolder text-center">誤點機率與一天的關係</p>
+                    </div>
+                    <img src="static/images/timeofday.png" class="card-img-top" alt="day of week">
+                </div>
+            </div>
+        
+            <div class="col-4">
+                <label class="fw-bolder">Week</label>
+                <div class="card">
+                    <div class="">
+                        <p class="card-text fw-bolder text-center">誤點機率與一周的關係</p>
+                    </div>
+                    <img src="static/images/dayofweek.png" class="card-img-top" alt="day of week">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <label class="fw-bolder">Month</label>
+                <div class="card">
+                    <div class="">
+                        <p class="card-text fw-bolder text-center">誤點機率與日期的關係</p>
+                      </div>
+                    <img src="static/images/dayofmonth.png" class="card-img-top" alt="dayofmonth">
+                </div>
+            </div>
+            
+            <div>
+                <br>
+            </div>
+            
+            <div class="col-4">
+                <label class="fw-bolder">Dep Airport</label>
+                <div class="card">
+                    <div class="">
+                        <p class="card-text fw-bolder text-center">誤點機率與出發機場之關係</p>
+                    </div>
+                    <img src="static/images/dep.png" class="card-img-top" alt="day of week">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <label class="fw-bolder">Arr Airport</label>
+                <div class="card">
+                    <div class="">
+                        <p class="card-text fw-bolder text-center">誤點機率與抵達機場之關係</p>
+                    </div>
+                    <img src="static/images/arr.png" class="card-img-top" alt="day of week">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <label class="fw-bolder">Airport Company</label>
+                <div class="card">
+                    <div class="">
+                        <p class="card-text fw-bolder text-center">誤點機率與航空公司之關係</p>
+                    </div>
+                    <img src="static/images/aircompany.png" class="card-img-top" alt="day of week">
+                </div>
+            </div>
+
+            <div>
+                <br>
+            </div>
+
+            <div class="col-4">
+                <label class="fw-bolder">Weather Type</label>
+                <div id="part1" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="static/images/WT01.png" class="d-block w-100" alt="WT01">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="static/images/WT02.png" class="d-block w-100" alt="WT02">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="static/images/WT03.png" class="d-block w-100" alt="WT03">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="static/images/WT04.png" class="d-block w-100" alt="WT04">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#part1" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#part1" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <label class="text-warning fw-bolder">※</label>
+                <br>
+                <label style="font-size: 1px">WT01 = Fog, ice fog, or freezing fog</label>
+                <label style="font-size: 1px">WT02 = Heavy fog or heaving freezing fog</label>
+                <label style="font-size: 1px">WT03 = Thunder</label>
+                <label style="font-size: 1px">WT04 = Ice pellets, sleet, snow pellets, or small hail</label>
+            </div>
+            
+            <div class="col-4">
+                <label></label>
+                <div id="part2" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="static/images/WT05.png" class="d-block w-100" alt="WT05">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="static/images/WT06.png" class="d-block w-100" alt="WT06">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="static/images/WT07.png" class="d-block w-100" alt="WT07">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#part2" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#part2" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+                <label style="font-size: 1px">WT05 = Hail</label><br>
+                <label style="font-size: 1px">WT06 = Glaze or rime</label>
+                <label style="font-size: 1px">WT07 = Dust, volcanic ash, blowing dust, blowing sand, or blowing obstruction</label>
+            </div>
+
+            <div class="col-4">
+                <label></label>
+                <div id="part3" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item">
+                        <img src="static/images/WT08.png" class="d-block w-100" alt="WT08">
+                      </div>  
+                      <div class="carousel-item active">
+                        <img src="static/images/WT09.png" class="d-block w-100" alt="WT09">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="static/images/WT10.png" class="d-block w-100" alt="WT10">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="static/images/WT11.png" class="d-block w-100" alt="WT11">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#part3" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#part3" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+                <label style="font-size: 1px">WT08 = Smoke or haze</label>
+                <label style="font-size: 1px">WT09 = Blowing or drifting snow</label>
+                <label style="font-size: 1px">WT10 = Tornado, waterspout, or funnel cloud</label>
+                <label style="font-size: 1px">WT11 = High or damaging winds</label>
+            </div>
+        <div>
+            <br>
+        </div>
+
+            
+
+        
+        </div>
+    </div>
+<!-- </div> -->
+
+<div class="site-footer">
+    <h4 class="text-center fw-bolder">BDSE27-2</h3>
+</div>
+
+
+{% endblock page_content %}

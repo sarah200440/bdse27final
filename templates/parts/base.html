@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Untree.co">
+    <link href="{{ url_for('static', filename='images/planeicon.png') }}" rel="shortcut icon" />
+    <meta name="description" content="" />
+
+    <meta name="keywords" content="bootstrap, bootstrap5" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>{% block title %}Sterial &mdash; Free Bootstrap 5 Website Template by Untree.co {% endblock title %}</title>
+
+
+    {% block styles %}
+    {% include "parts/_styles.html" %}
+    {% endblock styles %}
+
+   
+    {% endblock head %}
+</head>
+
+<body>
+
+    {% block body %}
+    <div class="site-mobile-menu site-navbar-target">
+        {% block site_mobile_menu %}
+        {% include "parts/site_mobile_menu.html" %}
+        {% endblock site_mobile_menu %}
+    </div>
+
+    <nav class="site-nav mt-3">
+        {% block site_nav %}
+        {% include "parts/site_nav.html" %}
+        {% endblock site_nav %}
+    </nav>
+
+    <div class="hero overlay">
+        {% block hero_overlay %}
+        {% include "parts/hero_overlay.html" %}
+
+                {% block page_content2 %}
+           
+                    {% endblock page_content2 %}
+
+
+
+
+        {% endblock hero_overlay %}
+    </div>
+
+    {% block page_content %}
+    {% include "parts/t1.html"  %}
+    {% endblock page_content %}
+
+
+    {% endblock body %}
+    {% block script_foot%}
+    {% endblock script_foot %}
+
+    {% block scripts %}
+    {% include "parts/_scripts.html" %}
+    {% endblock scripts %}
+
+
+</body>
+
+</html>

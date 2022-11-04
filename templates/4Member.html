@@ -1,0 +1,111 @@
+{% extends "parts/base.html" %}
+
+{% block title %} About Us {% endblock title %}
+
+{% block site_nav %}
+{% include "parts/site_nav.html" %}
+
+
+{% endblock site_nav %}
+
+
+{% block hero_overlay %}
+{% include "parts/hero_overlay.html" %}
+<div class="container">
+    <div class="row align-items-center justify-content-start">
+        <div class="col-lg-5">
+            {% block page_content2 %}
+            <h1 class="heading" data-aos="fade-up">About Us</h1>
+            {% endblock page_content2 %}
+        </div>
+    </div>
+</div>
+{% endblock hero_overlay %}
+
+
+{% block page_content %}
+
+<div class="section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-6 mx-auto text-center">
+                <div class="heading-content" data-aos="fade-up">
+                    <h2 class="heading">Meet Our Team</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <a href="#" class="person text-center fw-bolder">
+                    <img src="static/images/05.jpg" alt="Image" class="img-fluid mb-4">
+                    <h3 class="mb-3">陳儒萱 (組長)</h3>
+                    <p class="text-muted">資料處理</p>
+                    <p class="text-muted">模型預測</p>
+                    <p class="text-muted">視覺化</p>
+                    <br>
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="#" class="person text-center fw-bolder">
+                    <img src="static/images/01.jpg" alt="Image" class="img-fluid mb-4">
+                    <h3 class="mb-3">詹森</h3>
+                    <p class="text-muted">網路爬蟲</p>
+                    <p class="text-muted">資料處理</p>
+                    <p class="text-muted">模型預測</p>
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="#" class="person text-center fw-bolder">
+                    <img src="static/images/07.jpg" alt="Image" class="img-fluid mb-4">
+                    <h3 class="mb-3">邱乙展</h3>
+                    <p class="text-muted">網路爬蟲</p>
+                    <p class="text-muted">資料處理</p>
+                    <p class="text-muted">模型預則</p>
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="#" class="person text-center fw-bolder">
+                    <img src="static/images/09.jpg" alt="Image" class="img-fluid mb-4">
+                    <h3 class="mb-3">李柏緯</h3>
+                    <p class="text-muted">資料處理</p>
+                    <p class="text-muted">模型預則</p>
+                    <p class="text-muted">視覺化</p>
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="#" class="person text-center fw-bolder">
+                    <img src="static/images/11.jpg" alt="Image" class="img-fluid mb-4">
+                    <h3 class="mb-3">許寅延</h3>
+                    <p class="text-muted">環境建置</p>
+                    <p class="text-muted">資料處理</p>
+                    <p class="text-muted">模型預則</p>
+                    <p class="text-muted">視覺化</p>
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="#" class="person text-center fw-bolder">
+                    <img src="static/images/15.jpg" alt="Image" class="img-fluid mb-4">
+                    <h3 class="mb-3">吳曉亭</h3>
+                    <p class="text-muted">網路爬蟲</p>
+                    <p class="text-muted">資料處理</p>
+                    <p class="text-muted">模型預測</p>
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="#" class="person text-center fw-bolder">
+                    <img src="static/images/18.jpg" alt="Image" class="img-fluid mb-4">
+                    <h3 class="mb-3">洪嘉宏</h3>
+                    <p class="text-muted">網路爬蟲</p>
+                    <p class="text-muted">資料處理</p>
+                    <p class="text-muted">模型預則</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-footer">
+    <h4 class="text-center fw-bolder">BDSE27-2</h3>
+</div>
+{% endblock page_content %}

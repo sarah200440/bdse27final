@@ -1,0 +1,311 @@
+{% extends "parts/base.html" %}
+
+{% block title %} Delay ? {% endblock title %}
+
+{% block site_nav %}
+{% include "parts/site_nav.html" %}
+
+
+{% endblock site_nav %}
+
+
+{% block hero_overlay %}
+{% include "parts/hero_overlay.html" %}
+<div class="container">
+    <div class="row align-items-center justify-content-start">
+        <div class="col-lg-5">
+            {% block page_content2 %}
+            <h1 class="heading" data-aos="fade-up" onclick="window.scrollTo(0,document.body.scrollHeight);return false;">Delay ?</h1>
+            {% endblock page_content2 %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock hero_overlay %}
+
+
+{% block page_content %}
+<form name="stiing" method="POST" action="/result">
+
+		<div class="container">
+			<div class="row">
+
+				<div>
+					<br>
+					<h1 class="text-center fw-bolder" style="color:peru">START</h6>
+				</div>
+
+	<div class="col-4">
+
+	<label class="fw-bolder" style="color:peru">出發日期</label>
+	<input type="date" id="date" name="date" maxlength="6" class="form-select form-select-sm mb-1" aria-label=".form-select-sm example">
+	
+	<label class="fw-bolder" style="color:peru">出發 Dep</label></br>	
+	出發州別
+	<select onChange="renew(this.selectedIndex);" name="startcontinent" class="form-select form-select-sm mb-1" aria-label=".form-select-sm example">
+		<option value="請選擇出發州">請選擇出發州
+		<option value="AK US">AK US
+		<option value="AL US">AL US
+		<option value="AR US">AR US
+		<option value="AS AQ">AS AQ
+		<option value="AZ US">AZ US
+		<option value="CA US">CA US
+		<option value="CO US">CO US
+		<option value="CT US">CT US
+		<option value="DE US">DE US
+		<option value="FL US">FL US
+		<option value="GA US">GA US
+		<option value="GU GQ">GU GQ
+		<option value="HI US">HI US
+		<option value="IA US">IA US
+		<option value="ID US">ID US
+		<option value="IL US">IL US
+		<option value="IN US">IN US
+		<option value="KS US">KS US
+		<option value="KY US">KY US
+		<option value="LA US">LA US
+		<option value="MA US">MA US
+		<option value="MD US">MD US
+		<option value="ME US">ME US
+		<option value="MI US">MI US
+		<option value="MN US">MN US
+		<option value="MO US">MO US
+		<option value="MS US">MS US
+		<option value="MT US">MT US
+		<option value="NC US">NC US
+		<option value="ND US">ND US
+		<option value="NE US">NE US
+		<option value="NH US">NH US
+		<option value="NJ US">NJ US
+		<option value="NM US">NM US
+		<option value="NV US">NV US
+		<option value="NY US">NY US
+		<option value="OH US">OH US
+		<option value="OK US">OK US
+		<option value="OR US">OR US
+		<option value="PA US">PA US
+		<option value="PR US">PR US
+		<option value="RI US">RI US
+		<option value="SC US">SC US
+		<option value="SD US">SD US
+		<option value="TN US">TN US
+		<option value="TX US">TX US
+		<option value="UT US">UT US
+		<option value="VA US">VA US
+		<option value="VI US">VI US
+		<option value="VT US">VT US
+		<option value="WA US">WA US
+		<option value="WI US">WI US
+		<option value="WV US">WV US
+		<option value="WY US">WY US
+	</select>
+	出發機場
+	<select name="startairport" style="width: 450" class="form-select form-select-sm mb-1" aria-label=".form-select-sm example">
+		<option value="">請先選擇出發州
+	</select>
+
+	<label class="fw-bolder" style="color:peru">抵達 Arr</label></br>
+	抵達州別
+	<select onChange="renew2(this.selectedIndex);" name="endcontinent" class="form-select form-select-sm mb-1" aria-label=".form-select-sm example">
+		<option value="請選擇抵達州">請選擇抵達州
+		<option value="AK US">AK US
+		<option value="AL US">AL US
+		<option value="AR US">AR US
+		<option value="AS AQ">AS AQ
+		<option value="AZ US">AZ US
+		<option value="CA US">CA US
+		<option value="CO US">CO US
+		<option value="CT US">CT US
+		<option value="DE US">DE US
+		<option value="FL US">FL US
+		<option value="GA US">GA US
+		<option value="GU GQ">GU GQ
+		<option value="HI US">HI US
+		<option value="IA US">IA US
+		<option value="ID US">ID US
+		<option value="IL US">IL US
+		<option value="IN US">IN US
+		<option value="KS US">KS US
+		<option value="KY US">KY US
+		<option value="LA US">LA US
+		<option value="MA US">MA US
+		<option value="MD US">MD US
+		<option value="ME US">ME US
+		<option value="MI US">MI US
+		<option value="MN US">MN US
+		<option value="MO US">MO US
+		<option value="MS US">MS US
+		<option value="MT US">MT US
+		<option value="NC US">NC US
+		<option value="ND US">ND US
+		<option value="NE US">NE US
+		<option value="NH US">NH US
+		<option value="NJ US">NJ US
+		<option value="NM US">NM US
+		<option value="NV US">NV US
+		<option value="NY US">NY US
+		<option value="OH US">OH US
+		<option value="OK US">OK US
+		<option value="OR US">OR US
+		<option value="PA US">PA US
+		<option value="PR US">PR US
+		<option value="RI US">RI US
+		<option value="SC US">SC US
+		<option value="SD US">SD US
+		<option value="TN US">TN US
+		<option value="TX US">TX US
+		<option value="UT US">UT US
+		<option value="VA US">VA US
+		<option value="VI US">VI US
+		<option value="VT US">VT US
+		<option value="WA US">WA US
+		<option value="WI US">WI US
+		<option value="WV US">WV US
+		<option value="WY US">WY US
+	</select>
+
+	抵達機場
+	<select name="endairport" style="width: 450" class="form-select form-select-sm mb-1" aria-label=".form-select-sm example">
+		<option value="">請先選擇抵達州
+	</select>
+
+	</div>
+
+	<div class="col-4">
+		<label class="fw-bolder" style="color:peru">目的地天氣 Destination Weather</label></br>
+		
+		
+		<label class="form-label" for="awnd">平均風速 <b>8</b> m/s</label>
+		<input class="form-range" id="awnd" min="0.00" max="100.00" step="0.01" type="range" name="awnd" value="8"> 
+
+		<label class="form-label" for="prcp">降雨量 <b>0.1</b> mm</label>
+		<input class="form-range" id="prcp" min="0.00" max="30.00" step="0.01" type="range" name="prcp" value="0.1">
+
+		<label class="form-label" for="tmax">最高溫 <b>70</b> °F</label>
+		<input class="form-range" id="tmax" min="-50" max="130" step="1" type="range" name="tmax" value="70">
+		
+		<label class="form-label" for="tmin">最低溫 <b>50</b> °F</label>
+		<input class="form-range" id="tmin" min="-50" max="130" step="1" type="range" name="tmin" value="50">
+ 
+		<label class="form-label" for="wsf2">最快風速(2min) <b>18</b> m/s</label>
+		<input class="form-range" id="wsf2" min="0" max="200" step="0.1" type="range" name="wsf2" value="18">
+
+		<label class="form-label" for="wsf5">最快風速(5sec) <b>35</b> m/s</label>
+		<input class="form-range" id="wsf5" min="0" max="300" step="0.1" type="range" name="wsf5" value="25">
+
+		<label class="form-label" for="snow">降雪量 <b>0.00</b> mm</label>
+		<input class="form-range" id="snow" min="0" max="40" step="0.1" type="range" name="snow" value="0.00">
+        
+		<script>
+			document.querySelectorAll("input").forEach(e => {
+			  e.oninput = () => e.previousElementSibling.children[0].textContent = e.value;
+			});
+		</script>
+
+	</div>
+
+	<div class="col-4">
+
+        <label class="fw-bolder" style="color:peru">天氣類型 Weather Type</label></br>
+
+		<input type="checkbox" class="btn-check" id="btn-check-1-outlined" autocomplete="off" name="wt01" value="1">
+        <label class="btn btn-outline-warning text-dark fw-bolder form-label" for="btn-check-1-outlined" title="Fog, ice fog, or freezing fog">霧</label>
+
+		<input type="checkbox" class="btn-check" id="btn-check-2-outlined" autocomplete="off" name="wt02" value="1">
+        <label class="btn btn-outline-warning text-dark fw-bolder form-label" for="btn-check-2-outlined" title="Heavy fog or heaving freezing fog">濃霧</label>
+        
+		<input type="checkbox" class="btn-check" id="btn-check-3-outlined" autocomplete="off" name="wt03" value="1">
+        <label class="btn btn-outline-warning text-dark fw-bolder form-label" for="btn-check-3-outlined" title="Thunder">閃電</label>
+
+		<input type="checkbox" class="btn-check" id="btn-check-4-outlined" autocomplete="off" name="wt04" value="1">
+        <label class="btn btn-outline-warning text-dark fw-bolder form-label" for="btn-check-4-outlined" title="Ice pellets, sleet, snow pellets, or small hail">小冰雹</label>
+	    
+		<input type="checkbox" class="btn-check" id="btn-check-5-outlined" autocomplete="off" name="wt05" value="1">
+        <label class="btn btn-outline-warning text-dark fw-bolder form-label" for="btn-check-5-outlined" title="Hail">冰雹</label>
+
+		<input type="checkbox" class="btn-check" id="btn-check-6-outlined" autocomplete="off" name="wt06" value="1">
+        <label class="btn btn-outline-warning text-dark fw-bolder form-label" for="btn-check-6-outlined" title="Glaze or rime">霧凇</label>
+
+		<input type="checkbox" class="btn-check" id="btn-check-7-outlined" autocomplete="off" name="wt07" value="1">
+        <label class="btn btn-outline-warning text-dark fw-bolder form-label" for="btn-check-7-outlined" title="Dust, volcanic ash, blowing dust, blowing sand, or blowing obstruction">沙塵暴</label>
+
+        <input type="checkbox" class="btn-check" id="btn-check-8-outlined" autocomplete="off" name="wt08" value="1">
+        <label class="btn btn-outline-warning text-dark fw-bolder form-label" for="btn-check-8-outlined" title="Smoke or haze">霾</label>
+
+		<input type="checkbox" class="btn-check" id="btn-check-9-outlined" autocomplete="off" name="wt09" value="1">
+        <label class="btn btn-outline-warning text-dark fw-bolder form-label" for="btn-check-9-outlined" title="Blowing or drifting snow">下雪</label>
+
+		<input type="checkbox" class="btn-check" id="btn-check-10-outlined" autocomplete="off" name="wt10" value="1">
+        <label class="btn btn-outline-warning text-dark fw-bolder form-label" for="btn-check-10-outlined" title="Tornado, waterspout, or funnel cloud">龍捲風</label>
+
+		<input type="checkbox" class="btn-check" id="btn-check-11-outlined" autocomplete="off" name="wt11" value="1">
+        <label class="btn btn-outline-warning text-dark fw-bolder form-label" for="btn-check-11-outlined" title="High or damaging winds">強陣風</label>
+		
+	</div>
+
+		<div class="row">
+			<button type="submit " value="Submit" class="btn bg-warning"
+		        style="color:rgb(255, 255, 255);width: 20%;margin: auto">
+				<img src="static/images/planeicon.png" style="width:30%">
+	        </button>
+	    </div>
+
+</form>
+
+<div>
+	<br>
+</div>
+
+<div class="col-4">
+<h6 class="fw-bolder">出發時間 : {{ date }}</h6>
+<h6 class="fw-bolder">出發州別 : {{ startcontinent }}</h6>
+<h6 class="fw-bolder">出發機場 : {{ startairport }}</h6>
+<h6 class="fw-bolder">抵達州別 : {{ endcontinent }}</h6>
+<h6 class="fw-bolder">抵達機場 : {{ endairport }}</h6>
+</div>
+
+<div class="col-4">
+<h6 class="fw-bolder">平均風速 : {{ AWND_x }} m/s</h6>
+<h6 class="fw-bolder">降雨量 : {{ PRCP_x }} mm</h6>
+<h6 class="fw-bolder">最高溫 : {{ TMAX_x }} °F</h6>
+<h6 class="fw-bolder">最低溫 : {{ TMIN_x }} °F</h6>
+<h6 class="fw-bolder">最快風速(2min) : {{ WSF2_x }} m/s</h6>
+<h6 class="fw-bolder">最快風速(5sec) : {{ WSF5_x }} m/s</h6>
+<h6 class="fw-bolder">降雪量 : {{ SNOW_x }} mm</h6>
+</div >
+
+<div class="col-4">
+	<br>
+	<h4 class="fw-bolder text-center text-warning">您的班機將</h4>
+	<h3 class="fw-bolder text-center round-pill alert" style="background-color:{{CCcolor}}">{{ answer }}</h2>
+</div>
+
+<!-- <div class="col-4">
+<h6>霧:{{ WT01_x }}</h6>
+<h6>濃霧:{{ WT02_x }}</h6>
+<h6>閃電:{{ WT03_x }}</h6>
+<h6>小冰雹:{{ WT04_x }}</h6>
+<h6>冰雹:{{ WT05_x }}</h6>
+<h6>霧淞:{{ WT06_x }}</h6>
+<h6>沙塵暴:{{ WT07_x }}</h6>
+<h6>霾:{{ WT08_x }}</h6>
+<h6>下雪:{{ WT09_x }}</h6>
+<h6>龍捲風:{{ WT10_x }}</h6>
+<h6>強陣風:{{ WT11_x }}</h6>
+<h6>季節:{{ Quarter }}</h6>
+<h6>星期:{{ DayOfWeek }}</h6>
+<h6>出發時間:{{ CRSDepTime }}</h6>
+<h6>抵達時間:{{ CRSArrTime }}</h6>
+<h6>飛行距離:{{ DistanceGroup }}</h6>
+<h6>WT18:{{ WT18_x }}</h6>
+</div> -->
+
+</div>	
+</div>
+<!-- </div> -->
+
+<div class="site-footer">
+    <h4 class="text-center fw-bolder">BDSE27-2</h3>
+</div>
+{% endblock page_content %}

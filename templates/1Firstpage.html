@@ -1,0 +1,147 @@
+{% extends "parts/base.html" %}
+
+{% block title %} DELAY滴淚 {% endblock title %}
+
+{% block site_nav %}
+{% include "parts/site_nav.html" %}
+
+
+{% endblock site_nav %}
+
+
+{% block hero_overlay %}
+{% include "parts/hero_overlay.html" %}
+<div class="container">
+    <div class="row align-items-center justify-content-start">
+        <div class="col-lg-5">
+            {% block page_content2 %}
+            <h1 class="heading" data-aos="fade-up">DELAY 滴淚</h1>
+            <p class="fw-bolder" data-aos="fade-up">生命，從此不該浪費在無謂的事物上</p>
+            <p class="fw-bolder" data-aos="fade-up">準點，掌握 delay 不再滴淚</p>
+            {% endblock page_content2 %}
+        </div>
+    </div>
+</div>
+{% endblock hero_overlay %}
+
+
+{% block page_content %}
+<div class="section section-1" data-aos="fade-up" data-aos-delay="100">
+    <div class="container">
+        <div class="row align-items-center justify-content-between  mb-5">
+            <div class="col-lg-5" data-aos="fade-up">
+                <h2 class="heading mb-3">美國景點導覽</h2>
+                <p>一起漫步美國著名奇觀</p>
+            </div>		
+            <div class="col-lg-5 text-md-end" data-aos="fade-up" data-aos-delay="100">
+                <div id="destination-controls">
+                    <span class="prev me-3" data-controls="prev">
+                        <span class="icon-chevron-left"></span>
+
+                    </span>
+                    <span class="next" data-controls="next">
+                        <span class="icon-chevron-right"></span>
+
+                    </span>
+                </div>
+            </div>
+        </div>	
+
+    </div>		
+
+    <div class="destination-slider-wrap">
+        <div class="destination-slider">
+            <div class="destination">
+                <div class="thumb">
+                    <img src="static/images/greatland.jpg" alt="Image" class="img-fluid">
+                </div>
+                <div class="mt-4">
+                    <h3><a href="#">優勝美地國家公園</a></h3>
+                    <span class="meta">優勝美地被選定為世界自然遺產，其壯觀的花崗岩峭壁、瀑布、清澈的溪流、巨型紅杉林和生物多樣性為國際所公認</span>
+                </div>
+            </div>
+
+            <div class="destination">
+                <div class="thumb">
+                    <img src="static/images/yellowpark.jpg" alt="Image" class="img-fluid">
+                </div>
+                <div class="mt-4">
+                    <h3><a href="#">美國黃石公園</a></h3>
+                    <span class="meta">世界上第一個國家公園擁有「地球上最獨一無二的神奇樂園」之稱</span>
+                </div>
+            </div>
+
+            <div class="destination">
+                <div class="thumb">
+                    <img src="static/images/timesquare.jpg" alt="Image" class="img-fluid">
+                    
+                </div>
+                <div class="mt-4">
+                    <h3><a href="#">美國時代廣場</a></h3>
+                    <span class="meta">時代廣場是世界上最繁忙的步行區之一，也是百老匯劇院區和世界娛樂產業中心</span>
+                </div>
+            </div>
+
+            <div class="destination">
+                <div class="thumb">
+                    <img src="static/images/sheep.jpg" alt="Image" class="img-fluid">
+                    
+                </div>
+                <div class="mt-4">
+                    <h3><a href="#">美國羚羊谷</a></h3>
+                    <span class="meta">羚羊峽谷是狹縫型峽谷，位於美國亞利桑納州北方的納瓦霍族保留地。在地形上，被分為上羚羊谷、下羚羊谷這兩個獨立的部分</span>
+                </div>
+            </div>
+
+
+            <div class="destination">
+                <div class="thumb">
+                    <img src="static/images/light.jpeg" alt="Image" class="img-fluid">
+                </div>
+                <div class="mt-4">
+                    <h3><a href="#">阿拉斯加極光</a></h3>
+                    <span class="meta">阿拉斯加的第二大城「費爾班克斯」地處北緯64.48度，是最接近北極圈北緯66.33度的地方，因雲層較薄、較少、氣候穩定，成為全世界出現北極光機率最高的地點</span>
+                </div>
+            </div>
+
+            <div class="destination">
+                <div class="thumb">
+                    <img src="static/images/water.jpg" alt="Image" class="img-fluid">
+                </div>
+                <div class="mt-4">
+                    <h3><a href="#">內華達州飛噴泉</a></h3>
+                    <span class="meta">一座色彩繽紛的間歇噴泉，這個奇特的景觀是1916年因為挖井造成的，因為地熱的原因，井口的礦物因為受熱噴出，而逐漸積累成現在的模樣</span>
+                </div>
+            </div>
+
+            <div class="destination">
+                <div class="thumb">
+                    <img src="static/images/fluid.jpg" alt="Image" class="img-fluid">
+                </div>
+                <div class="mt-4">
+                    <h3><a href="#">尼加拉瀑布</a></h3>
+                    <span class="meta">是由三座位於北美洲五大湖區尼加拉河上瀑布的總稱，與巴西和阿根廷邊界的「伊瓜蘇瀑布」、非洲的「維多利亞瀑布」並稱為世界三大瀑布</span>
+                </div>
+            </div>
+
+            <div class="destination">
+                <div class="thumb">
+                    <img src="static/images/face.jpg" alt="Image" class="img-fluid">
+                </div>
+                <div class="mt-4">
+                    <h3><a href="#">拉什莫爾山</a></h3>
+                    <span class="meta">位於美國南達科他州，公園裡有四座高達18公尺美國歷史上著名的四位總統頭像，分別是 華盛頓、傑佛遜、老羅斯福和林肯，他們被認為是美國最偉大的總統</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="site-footer">
+    <P class="fw-bolder text-center">
+        BDSE-27-2
+    </P>
+
+{% endblock page_content %}
